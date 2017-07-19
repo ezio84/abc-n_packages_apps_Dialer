@@ -357,7 +357,7 @@ public class ProximitySensor implements AccelerometerListener.OrientationListene
                 (Settings.System.getInt(mContext.getContentResolver(),
                 Settings.System.PROXIMITY_AUTO_SPEAKER_INCALL_ONLY, 0) == 1);
         mProxSpeakerDelay = Settings.System.getInt(mContext.getContentResolver(),
-                Settings.System.PROXIMITY_AUTO_SPEAKER_DELAY, 100);
+                Settings.System.PROXIMITY_AUTO_SPEAKER_DELAY, 3000);
 
         // if phone off hook (call in session), and prox speaker feature is on
         if (mIsPhoneOffhook && Settings.System.getInt(mContext.getContentResolver(),

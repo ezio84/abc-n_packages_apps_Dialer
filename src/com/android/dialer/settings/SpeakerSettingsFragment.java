@@ -53,7 +53,7 @@ public class SpeakerSettingsFragment extends PreferenceFragment
 
         mProxSpeakerDelay = (ListPreference) findPreference(PROXIMITY_AUTO_SPEAKER_DELAY);
         int proxDelay = Settings.System.getInt(resolver,
-                Settings.System.PROXIMITY_AUTO_SPEAKER_DELAY, 100);
+                Settings.System.PROXIMITY_AUTO_SPEAKER_DELAY, 3000);
         mProxSpeakerDelay.setValue(String.valueOf(proxDelay));
         mProxSpeakerDelay.setOnPreferenceChangeListener(this);
         updateProximityDelaySummary(proxDelay);
